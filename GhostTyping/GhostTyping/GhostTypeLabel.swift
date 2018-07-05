@@ -12,6 +12,12 @@ import UIKit
 
     //    MARK:- IBInspactable Variables
     @IBInspectable open var charTimeInterval: Double = 0.1
+    @IBInspectable open var cursorImage: UIImage! {
+        didSet {
+            super.tintColor = UIColor(patternImage: cursorImage)
+        }
+    }
+    @IBInspectable open var sizeOfCursor: Double = 0.0
     
     //    MARK:- Private Variables
     private var currDispatchId: Int = 320
@@ -30,6 +36,18 @@ import UIKit
             
             startTyping(newValue, charTimeInterval: charTimeInterval, true, currDispatchId)
         }
+    }
+    
+    /// Function to resize the cursor
+    ///
+    /// - Parameter position: Current cursor postion
+    /// - Returns: Coordinate of position
+    
+    //    TODO: calculate size of the cursor image
+    open override func caretRect(for position: UITextPosition) -> CGRect {
+        var newRect = super.caretRect(for: position)
+        newRect.size = CGSize(width: sizeOfCursor, height: sizeOfCursor)
+        return newRect
     }
 }
 
