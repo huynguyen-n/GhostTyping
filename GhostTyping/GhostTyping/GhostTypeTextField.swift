@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable open class GhostTypeLabel: UITextField, UITextFieldDelegate {
+@IBDesignable open class GhostTypeTextField: UITextField, UITextFieldDelegate {
 
     //    MARK:- IBInspactable Variables
     @IBInspectable open var charTimeInterval: Double = 0.1

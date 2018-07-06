@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		001246DE20EDDE3F00C60799 /* GhostTyping.h in Headers */ = {isa = PBXBuildFile; fileRef = 001246DC20EDDE3F00C60799 /* GhostTyping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		001246E920EDDFF400C60799 /* GhostTypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246E820EDDFF400C60799 /* GhostTypeLabel.swift */; };
+		001246E920EDDFF400C60799 /* GhostTypeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246E820EDDFF400C60799 /* GhostTypeTextField.swift */; };
 		0012470920EDFF5B00C60799 /* GhostTyeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012470820EDFF5B00C60799 /* GhostTyeAnimations.swift */; };
 /* End PBXBuildFile section */
 
@@ -16,7 +16,7 @@
 		001246D920EDDE3F00C60799 /* GhostTyping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GhostTyping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		001246DC20EDDE3F00C60799 /* GhostTyping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GhostTyping.h; sourceTree = "<group>"; };
 		001246DD20EDDE3F00C60799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		001246E820EDDFF400C60799 /* GhostTypeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostTypeLabel.swift; sourceTree = "<group>"; };
+		001246E820EDDFF400C60799 /* GhostTypeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostTypeTextField.swift; sourceTree = "<group>"; };
 		0012470820EDFF5B00C60799 /* GhostTyeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostTyeAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 		001246E720EDDFD800C60799 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				001246E820EDDFF400C60799 /* GhostTypeLabel.swift */,
+				001246E820EDDFF400C60799 /* GhostTypeTextField.swift */,
 				0012470820EDFF5B00C60799 /* GhostTyeAnimations.swift */,
 			);
 			name = Sources;
@@ -153,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001246E920EDDFF400C60799 /* GhostTypeLabel.swift in Sources */,
+				001246E920EDDFF400C60799 /* GhostTypeTextField.swift in Sources */,
 				0012470920EDFF5B00C60799 /* GhostTyeAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
