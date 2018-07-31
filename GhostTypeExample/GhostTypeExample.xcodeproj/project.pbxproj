@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000203FB21103A1F002D0AF6 /* GhostTyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000203FA21103A1F002D0AF6 /* GhostTyping.framework */; };
 		001246F720EDE03C00C60799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246F620EDE03C00C60799 /* AppDelegate.swift */; };
 		001246F920EDE03C00C60799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246F820EDE03C00C60799 /* ViewController.swift */; };
 		001246FC20EDE03C00C60799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001246FA20EDE03C00C60799 /* Main.storyboard */; };
 		001246FE20EDE03E00C60799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001246FD20EDE03E00C60799 /* Assets.xcassets */; };
 		0012470120EDE03E00C60799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001246FF20EDE03E00C60799 /* LaunchScreen.storyboard */; };
-		008079EE2110238300509725 /* GhostTyping.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 008079E62110230200509725 /* GhostTyping.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,13 +32,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				008079EE2110238300509725 /* GhostTyping.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000203FA21103A1F002D0AF6 /* GhostTyping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GhostTyping.framework; sourceTree = "<group>"; };
 		001246F320EDE03C00C60799 /* GhostTypeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostTypeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		001246F620EDE03C00C60799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		001246F820EDE03C00C60799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,6 @@
 		001246FD20EDE03E00C60799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0012470020EDE03E00C60799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0012470220EDE03E00C60799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		008079E62110230200509725 /* GhostTyping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GhostTyping.framework; path = "../GhostTyping/build/Debug-iphoneos/GhostTyping.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000203FB21103A1F002D0AF6 /* GhostTyping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 		0012470A20EE072E00C60799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				008079E62110230200509725 /* GhostTyping.framework */,
+				000203FA21103A1F002D0AF6 /* GhostTyping.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,6 +318,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L76363ZU66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GhostTyping.framework",
+				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L76363ZU66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GhostTyping.framework",
+				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
