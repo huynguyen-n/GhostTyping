@@ -52,9 +52,9 @@ import UIKit
 }
 
 // MARK:- Private Functions
-extension GhostTypeLabel {
+extension GhostTypeTextField {
     
-    private func startTyping(_ text: String, charTimeInterval: Double, _ initial: Bool, _ dispatchId: Int) {
+    fileprivate func startTyping(_ text: String, charTimeInterval: Double, _ initial: Bool, _ dispatchId: Int) {
         
         guard text.count > 0 && currDispatchId == dispatchId else {
             return
