@@ -19,6 +19,10 @@ class GhostTypeTextField: UITextField {
     // Speed of display character from text
     fileprivate var typeSpeed: Double = 0.0
     
+    fileprivate var tempStoreText = ""
+    
+    open var isLoop: Bool = false
+    
     //    TODO: Custom cursor image
     var cursorImage: UIImage! {
         didSet {
@@ -94,6 +98,14 @@ extension GhostTypeTextField {
         recursiveTyping(self.text, typeSpeed: typeSpeed, true, currDispatchId)
     }
     
+    fileprivate func customDeleteBackward() {
+        DispatchQueue.main.async {
+            self.tempStoreText = self.text
+            self.text = ""
+            self.recursiveTyping(self.tempStoreText, typeSpeed: self.typeSpeed, true, self.currDispatchId)
+        }
+    }
+    
     fileprivate func recursiveTyping(_ text: String, typeSpeed: Double, _ initial: Bool, _ dispatchId: Int) {
         
         guard text.count > 0 && currDispatchId == dispatchId else {
@@ -114,9 +126,15 @@ extension GhostTypeTextField {
             
             self.dispatchQueue.asyncAfter(deadline: .now() + typeSpeed, execute: { [weak self] in
                 
+                guard let `self` = self else { return }
+                
                 let nextString = String(text[firstChar...])
                 
-                self?.recursiveTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
+                if nextString.isEmpty && self.isLoop {
+                    self.customDeleteBackward()
+                }
+                
+                self.recursiveTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
             })
         }
     }

@@ -15,6 +15,12 @@ open class GhostType: UIView {
     //    MARK:- Private Variables
     private var textField: GhostTypeTextField!
     
+    open var isLoop: Bool! {
+        didSet {
+            textField.isLoop = isLoop
+        }
+    }
+    
     //    MARK:- Initialize
     public init(frame: CGRect, text: String, typeSpeed: Double) {
         super.init(frame: frame)
