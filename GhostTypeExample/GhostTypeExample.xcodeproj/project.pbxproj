@@ -7,30 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000203FB21103A1F002D0AF6 /* GhostTyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000203FA21103A1F002D0AF6 /* GhostTyping.framework */; };
+		000203FC21106661002D0AF6 /* GhostTyping.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 000203FA21103A1F002D0AF6 /* GhostTyping.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		001246F720EDE03C00C60799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246F620EDE03C00C60799 /* AppDelegate.swift */; };
 		001246F920EDE03C00C60799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001246F820EDE03C00C60799 /* ViewController.swift */; };
 		001246FC20EDE03C00C60799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001246FA20EDE03C00C60799 /* Main.storyboard */; };
 		001246FE20EDE03E00C60799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001246FD20EDE03E00C60799 /* Assets.xcassets */; };
 		0012470120EDE03E00C60799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001246FF20EDE03E00C60799 /* LaunchScreen.storyboard */; };
-		0012471020EE075B00C60799 /* GhostTyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012470B20EE072E00C60799 /* GhostTyping.framework */; };
-		0012471120EE075B00C60799 /* GhostTyping.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0012470B20EE072E00C60799 /* GhostTyping.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0012471220EE075B00C60799 /* Embed Frameworks */ = {
+		008079EA2110231A00509725 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0012471120EE075B00C60799 /* GhostTyping.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008079ED2110237500509725 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				000203FC21106661002D0AF6 /* GhostTyping.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000203FA21103A1F002D0AF6 /* GhostTyping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GhostTyping.framework; sourceTree = "<group>"; };
 		001246F320EDE03C00C60799 /* GhostTypeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostTypeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		001246F620EDE03C00C60799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		001246F820EDE03C00C60799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +48,6 @@
 		001246FD20EDE03E00C60799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0012470020EDE03E00C60799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0012470220EDE03E00C60799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0012470B20EE072E00C60799 /* GhostTyping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GhostTyping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0012471020EE075B00C60799 /* GhostTyping.framework in Frameworks */,
+				000203FB21103A1F002D0AF6 /* GhostTyping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +95,7 @@
 		0012470A20EE072E00C60799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0012470B20EE072E00C60799 /* GhostTyping.framework */,
+				000203FA21103A1F002D0AF6 /* GhostTyping.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +110,8 @@
 				001246EF20EDE03C00C60799 /* Sources */,
 				001246F020EDE03C00C60799 /* Frameworks */,
 				001246F120EDE03C00C60799 /* Resources */,
-				0012471220EE075B00C60799 /* Embed Frameworks */,
+				008079EA2110231A00509725 /* Embed Frameworks */,
+				008079ED2110237500509725 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -307,14 +317,21 @@
 		0012470620EDE03E00C60799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L76363ZU66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GhostTyping.framework",
+				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.GhostTypeExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -325,14 +342,21 @@
 		0012470720EDE03E00C60799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L76363ZU66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GhostTyping.framework",
+				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.GhostTypeExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
