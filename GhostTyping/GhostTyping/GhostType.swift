@@ -54,15 +54,6 @@ open class GhostType: UITextField {
         }
     }
     
-    open override var isUserInteractionEnabled: Bool {
-        get {
-            return true
-        }
-        set {
-            super.isUserInteractionEnabled = newValue
-        }
-    }
-    
     //    Hidden keyboard view set default value
     open override var inputView: UIView? {
         get {
