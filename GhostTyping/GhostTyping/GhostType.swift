@@ -8,6 +8,19 @@
 
 import UIKit
 
+//TODO: Add dummy view to solved selected action to UITextField
+open class GhostTypeView: UIView {
+    
+    public convenience init(frame: CGRect, text: String) {
+        self.init(frame: frame)
+        let ghostType = GhostType(frame: frame, text: text)
+        let view = UIView(frame: frame)
+        view.backgroundColor = .clear
+        self.addSubview(ghostType)
+        self.insertSubview(view, aboveSubview: ghostType)
+    }
+}
+
 @IBDesignable
 open class GhostType: UITextField {
     
@@ -21,13 +34,14 @@ open class GhostType: UITextField {
     @IBInspectable open var charTimeInterval: Double = 0.1
     
     //    TODO: Custom cursor image
-    @IBInspectable open var cursorImage: UIImage! {
+    var cursorImage: UIImage! {
         didSet {
             super.tintColor = UIColor(patternImage: cursorImage)
         }
     }
     
-    @IBInspectable open var sizeOfCursor: CGSize = CGSize(width: 10.0, height: 2.0)
+    //    Resize size of cursor, currenlty is splash
+    private var sizeOfCursor: CGSize = CGSize(width: 10.0, height: 2.0)
     
     //    MARK:- Initialize
     public init(frame: CGRect, text: String) {
@@ -72,7 +86,7 @@ open class GhostType: UITextField {
     //    TODO: calculate size of the cursor image
     open override func caretRect(for position: UITextPosition) -> CGRect {
         var newRect = super.caretRect(for: position)
-        newRect.origin.y = newRect.origin.y + newRect.size.height
+        newRect.origin.y = newRect.origin.y + newRect.size.height - sizeOfCursor.height
         newRect.size = sizeOfCursor
         return newRect
     }
@@ -86,6 +100,7 @@ extension GhostType {
     fileprivate func initializeGhostType() {
         becomeFirstResponder()
         tintColor = textColor
+        isSelected = false
     }
     
     fileprivate func startTyping(_ text: String, charTimeInterval: Double, _ initial: Bool, _ dispatchId: Int) {

@@ -13,14 +13,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         let frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 100.0))
         let text = "Lorem ipsum tao mento lucas"
-        let ghostType = GhostType(frame: frame, text: text)
-        ghostType.becomeFirstResponder()
-        
+        let ghostType = GhostTypeView(frame: frame, text: text)
         self.view.addSubview(ghostType)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
