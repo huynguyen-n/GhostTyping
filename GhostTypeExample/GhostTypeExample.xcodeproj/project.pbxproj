@@ -312,7 +312,7 @@
 				DEVELOPMENT_TEAM = L76363ZU66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GhostTyping.framework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +336,7 @@
 				DEVELOPMENT_TEAM = L76363ZU66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GhostTyping.framework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GhostTypeExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

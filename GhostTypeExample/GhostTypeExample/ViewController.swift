@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         let frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 100.0))
         let text = "Lorem ipsum tao mento lucas"
-        let ghostType = GhostTypeView(frame: frame, text: text)
+        let ghostType = GhostType(frame: frame, text: text, typeSpeed: 0.5)
         self.view.addSubview(ghostType)
     }
 
