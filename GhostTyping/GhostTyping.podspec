@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
 GhostTyping basically is a UIView for iOS with type writing animation inside. Beside that, I will add more as possible animations and custom font, cursor to improve that better about performance and beauty.
 DESC
   s.homepage     = 'https://github.com/huynguyen-n/GhostTyping'
-  s.license      = { :type => 'MIT', :file => '../LICENSE' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Huy Nguyen' => 'huynguyen@gmail.com' }
   s.source       = { :git => 'https://github.com/huynguyen-n/GhostTyping.git', :tag => s.version.to_s }
-  s.source_files = 'GhostTyping/*.swift'
+  s.source_files = 'GhostTyping/GhostTyping/*.swift'
   s.ios.deployment_target = '9.0'
 end
