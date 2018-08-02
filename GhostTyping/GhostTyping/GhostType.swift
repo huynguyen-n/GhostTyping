@@ -8,125 +8,31 @@
 
 import UIKit
 
-//TODO: Add dummy view to solved selected action to UITextField
-open class GhostTypeView: UIView {
-    
-    public convenience init(frame: CGRect, text: String) {
-        self.init(frame: frame)
-        let ghostType = GhostType(frame: frame, text: text)
-        let view = UIView(frame: frame)
-        view.backgroundColor = .clear
-        self.addSubview(ghostType)
-        self.insertSubview(view, aboveSubview: ghostType)
-    }
-}
-
+//TODO: Add dummy view to solved selected action in UITextField
 @IBDesignable
-open class GhostType: UITextField {
+open class GhostType: UIView {
     
-    //    MARK:- Variables
-    private var currDispatchId: Int = 320
-    private let dispatchQueue = DispatchQueue(label: "com.br.GhostTyping")
-
-    //    MARK:- IBInspectable
+    //    MARK:- Private Variables
+    private var textField: GhostTypeTextField!
     
-    //    Timer for each character displaying
-    @IBInspectable open var charTimeInterval: Double = 0.1
-    
-    //    TODO: Custom cursor image
-    var cursorImage: UIImage! {
+    open var isLoop: Bool! {
         didSet {
-            super.tintColor = UIColor(patternImage: cursorImage)
+            textField.isLoop = isLoop
         }
     }
     
-    //    Resize size of cursor, currenlty is splash
-    private var sizeOfCursor: CGSize = CGSize(width: 10.0, height: 2.0)
-    
     //    MARK:- Initialize
-    public init(frame: CGRect, text: String) {
+    public init(frame: CGRect, text: String, typeSpeed: Double) {
         super.init(frame: frame)
-        self.text = text
-        initializeGhostType()
+        
+        textField = GhostTypeTextField(frame: frame, text: text, typeSpeed: typeSpeed)
+        let view = UIView(frame: frame)
+        view.backgroundColor = .clear
+        self.addSubview(textField)
+        self.insertSubview(view, aboveSubview: textField)
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("Initialize required")
-    }
-    
-    //    MARK:- Overrides
-    open override var text: String! {
-        get {
-            return super.text
-        }
-        set {
-            if charTimeInterval < 0 {
-                charTimeInterval = -charTimeInterval
-            }
-            
-            startTyping(newValue, charTimeInterval: charTimeInterval, true, currDispatchId)
-        }
-    }
-    
-    //    Hidden keyboard view set default value
-    open override var inputView: UIView? {
-        get {
-            return UIView()
-        }
-        set {
-            super.inputView = newValue
-        }
-    }
-    
-    /// Function to resize the cursor
-    ///
-    /// - Parameter position: Current cursor postion
-    /// - Returns: Coordinate of position
-    
-    //    TODO: calculate size of the cursor image
-    open override func caretRect(for position: UITextPosition) -> CGRect {
-        var newRect = super.caretRect(for: position)
-        newRect.origin.y = newRect.origin.y + newRect.size.height - sizeOfCursor.height
-        newRect.size = sizeOfCursor
-        return newRect
-    }
-}
-
-
-
-// MARK:- Private Functions
-extension GhostType {
-    
-    fileprivate func initializeGhostType() {
-        becomeFirstResponder()
-        tintColor = textColor
-        isSelected = false
-    }
-    
-    fileprivate func startTyping(_ text: String, charTimeInterval: Double, _ initial: Bool, _ dispatchId: Int) {
-        
-        guard text.count > 0 && currDispatchId == dispatchId else {
-            return
-        }
-        
-        if initial {
-            
-            super.text = ""
-            
-        }
-        
-        let firstChar = text.index(text.startIndex, offsetBy: 1)
-        
-        DispatchQueue.main.async {
-            
-            super.text = super.text! + String(text[..<firstChar])
-            
-            self.dispatchQueue.asyncAfter(deadline: .now() + charTimeInterval, execute: { [weak self] in
-                
-                let nextString = String(text[firstChar...])
-                
-                self?.startTyping(nextString, charTimeInterval: charTimeInterval, false, dispatchId)
-            })
-        }
+        fatalError("init(coder:) has not been implemented")
     }
 }
