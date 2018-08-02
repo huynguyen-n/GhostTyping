@@ -10,28 +10,24 @@ import UIKit
 
 class GhostTypeTextField: UITextField {
     
-    //    MARK:- Variables
-    private var currDispatchId: Int = 320
-    private let dispatchQueue = DispatchQueue(label: "com.br.GhostTyping")
-    
-    //    MARK:- IBInspectable
-    
-    // Speed of display character from text
+    //    MARK:- Private Variables
+    fileprivate var currDispatchId: Int = 320
+    fileprivate let dispatchQueue = DispatchQueue(label: "com.br.GhostTyping")
     fileprivate var typeSpeed: Double = 0.0
-    
     fileprivate var tempStoreText = ""
+    fileprivate var sizeOfCursor: CGSize = CGSize(width: 10.0, height: 2.0)
     
+    //    MARK:- Public Variables
     open var isLoop: Bool = false
     
+    open var strings: [String] = ["Ghost Typing", "Ghost Writer"]
+    
     //    TODO: Custom cursor image
-    var cursorImage: UIImage! {
+    open var cursorImage: UIImage! {
         didSet {
             super.tintColor = UIColor(patternImage: cursorImage)
         }
     }
-    
-    //    Resize size of cursor, currenlty is splash
-    private var sizeOfCursor: CGSize = CGSize(width: 10.0, height: 2.0)
     
     //    MARK:- Initialize
     init(frame: CGRect, text: String, typeSpeed: Double) {
@@ -95,18 +91,35 @@ extension GhostTypeTextField {
             typeSpeed = -typeSpeed
         }
         
-        recursiveTyping(self.text, typeSpeed: typeSpeed, true, currDispatchId)
-    }
-    
-    fileprivate func customDeleteBackward() {
-        DispatchQueue.main.async {
-            self.tempStoreText = self.text
-            self.text = ""
-            self.recursiveTyping(self.tempStoreText, typeSpeed: self.typeSpeed, true, self.currDispatchId)
+        if strings.count > 0 {
+            self.isLoop = true
+            self.gtTyping(self.text + strings.first!, typeSpeed: typeSpeed, true, currDispatchId)
+        } else {
+            self.gtTyping(self.text, typeSpeed: typeSpeed, true, currDispatchId)
         }
     }
     
-    fileprivate func recursiveTyping(_ text: String, typeSpeed: Double, _ initial: Bool, _ dispatchId: Int) {
+    fileprivate func gtDeleteBackward() {
+        
+        // loop array String
+        DispatchQueue.main.async {
+            self.tempStoreText = self.text.replacingOccurrences(of: self.strings.first!, with: "")
+            self.strings.first!.forEach { _ in
+                self.deleteBackward()
+            }
+            self.gtTyping(self.strings[1], typeSpeed: self.typeSpeed, true, self.currDispatchId)
+        }
+        
+        
+        // loop all
+//        DispatchQueue.main.async {
+//            self.tempStoreText = self.text
+//            self.text = ""
+//            self.gtTyping(self.tempStoreText, typeSpeed: self.typeSpeed, true, self.currDispatchId)
+//        }
+    }
+    
+    fileprivate func gtTyping(_ text: String, typeSpeed: Double, _ initial: Bool, _ dispatchId: Int) {
         
         guard text.count > 0 && currDispatchId == dispatchId else {
             return
@@ -122,7 +135,7 @@ extension GhostTypeTextField {
         
         DispatchQueue.main.async {
             
-            super.text = super.text! + String(text[..<firstChar])
+            super.text = super.text ?? "" + String(text[..<firstChar])
             
             self.dispatchQueue.asyncAfter(deadline: .now() + typeSpeed, execute: { [weak self] in
                 
@@ -131,10 +144,10 @@ extension GhostTypeTextField {
                 let nextString = String(text[firstChar...])
                 
                 if nextString.isEmpty && self.isLoop {
-                    self.customDeleteBackward()
+                    self.gtDeleteBackward()
                 }
                 
-                self.recursiveTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
+                self.gtTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
             })
         }
     }
