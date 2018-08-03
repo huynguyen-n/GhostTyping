@@ -13,7 +13,15 @@
 
 ## Installation
 
+GhostTyping 
 
+```
+    pod ''
+```
+
+## Usage
+
+GhostTyping is a subclass of UIView
 
 ## License
 
