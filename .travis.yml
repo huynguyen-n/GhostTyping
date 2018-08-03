@@ -20,8 +20,9 @@ script:
 
   xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
   
+  - cd GhostTyping
+  
   # Run `pod lib lint` if specified
-  - cd GhostTyping;
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint;
     fi
