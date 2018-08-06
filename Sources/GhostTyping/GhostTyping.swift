@@ -13,7 +13,7 @@ import UIKit
 open class GhostTyping: UIView {
     
     //    MARK:- Private Variables
-    private var textField: GhostTypeTextField!
+    private var textField: GhostTypingTextField!
     
     open var isLoop: Bool! {
         didSet {
@@ -25,7 +25,7 @@ open class GhostTyping: UIView {
     public init(frame: CGRect, text: String, typeSpeed: Double) {
         super.init(frame: frame)
         
-        textField = GhostTypeTextField(frame: frame, text: text, typeSpeed: typeSpeed)
+        textField = GhostTypingTextField(frame: frame, text: text, typeSpeed: typeSpeed)
         let view = UIView(frame: frame)
         view.backgroundColor = .clear
         self.addSubview(textField)
