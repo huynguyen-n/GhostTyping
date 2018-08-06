@@ -6,6 +6,24 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GhostTyping.svg)](https://img.shields.io/cocoapods/v/GhostTyping.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub issues](https://img.shields.io/github/issues/huynguyen-n/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/issues)
 
+GhostTyping is an custom UIView with UITextField inside library written in Swift. The goal is bring all of animation and features like another Javascript framework to iOS native.
+
+## Features
+
+- [x] Core type writing with UITextField
+- [ ] Cursor custom with images imported
+- [ ] Animations
+  - [x] Basic
+  - [ ] Fade Out
+  - [ ] Smart Backspace
+  - [ ] In an input
+  - [ ] Shuffled
+  - [ ] Bulk Typing
+  - [ ] Star/stop/cancel
+- [ ] Fonts implement
+- [ ] Comprehensive Unit and Integration Test Coverage
+- [ ] [Complete Documentation](https://ghosttyping.github.io/GhostTyping)
+
 ## Installation
 
 ### CocoaPods
