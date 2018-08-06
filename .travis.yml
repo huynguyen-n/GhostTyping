@@ -18,8 +18,6 @@ script:
   - xcodebuild -version
   - xcodebuild -showsdks
   - xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
-  - ls
-  - cd GhostTyping
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint --no-clean --allow-warnings;
     fi
