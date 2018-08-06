@@ -10,7 +10,7 @@ env:
   - WORKSPACE=GhostType.xcworkspace
   - IOS_FRAMEWORK_SCHEME="GhostTyping"
   matrix:
-    - DESTINATION="platform=iOS Simulator, name=iPhone X, OS=11.4"                    SCHEME="$IOS_FRAMEWORK_SCHEME"    RUN_TESTS="NO" BUILD_EXAMPLE="NO"  POD_LINT="YES"
+    - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.4"                    SCHEME="$IOS_FRAMEWORK_SCHEME"    RUN_TESTS="NO" BUILD_EXAMPLE="NO"  POD_LINT="YES"
 before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
