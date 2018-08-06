@@ -2,9 +2,14 @@
 
 <img src="https://raw.githubusercontent.com/huynguyen-n/GhostTyping/master/meta/repo_banner.png"/>
 
-[![Build Status](https://travis-ci.com/huynguyen-n/GhostTyping.svg?branch=master?style=flat-square)](https://travis-ci.com/huynguyen-n/GhostTyping) [![Platform](https://img.shields.io/badge/platform-ios-green.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping) [![](https://img.shields.io/badge/Swift-4.1-blue.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping) [![License](https://img.shields.io/cocoapods/l/GhostTyping.svg?style=flat-square)](LICENSE) 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GhostTyping.svg?style=flat-square)](https://img.shields.io/cocoapods/v/GhostTyping.svg)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage) [![GitHub issues](https://img.shields.io/github/issues/huynguyen-n/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/issues)
+[![Travis (.com)](https://img.shields.io/travis/com/huynguyen-n/GhostTyping.svg?style=flat-square)](https://travis-ci.com/huynguyen-n/GhostTyping) [![GitHub issues](https://img.shields.io/github/issues/huynguyen-n/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/issues)
+
+[![Swift version](https://img.shields.io/badge/Swift-3.3-blue.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping) [![Platform](https://img.shields.io/badge/platform-ios-green.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping) 
+
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GhostTyping.svg?style=flat-square)](https://img.shields.io/cocoapods/v/GhostTyping.svg) 
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage) [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat-square)](https://swift.org/package-manager/)
+
+[![Lisence](https://img.shields.io/cocoapods/l/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/LISENCE) 
 
 GhostTyping is an custom UIView with UITextField inside library written in Swift. The goal is bring all of animation and features like another Javascript framework to iOS native.
 
