@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         let frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 100.0))
         let text = "Hello guys, my name is: "
-        let ghostType = GhostType(frame: frame, text: text, typeSpeed: 0.1)
+        let ghostType = GhostTyping(frame: frame, text: text, typeSpeed: 0.1)
         ghostType.isLoop = true
         self.view.addSubview(ghostType)
     }

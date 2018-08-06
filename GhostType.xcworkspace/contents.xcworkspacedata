@@ -5,6 +5,6 @@
       location = "group:GhostTypeExample/GhostTypeExample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:GhostTyping/GhostTyping.xcodeproj">
+      location = "group:Sources/GhostTyping.xcodeproj">
    </FileRef>
 </Workspace>
