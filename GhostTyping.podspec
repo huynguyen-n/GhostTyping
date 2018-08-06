@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = '0.0.1'
   s.summary      = 'Beautiful iOS type writing animation like a ghost.'
   s.description  = <<-DESC
-GhostTyping basically is a UIView for iOS with type writing animation inside. Beside that, I will add more as possible animations and custom font, cursor to improve that better about performance and beauty.
+GhostTyping basically is a UIView for iOS with UITextField type writing inside. Beside that, I will add more as possible animations and custom font, cursor to improve that better about performance and beauty.
 DESC
   s.homepage     = 'https://github.com/huynguyen-n/GhostTyping'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
