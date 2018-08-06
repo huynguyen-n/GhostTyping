@@ -14,7 +14,7 @@ DESC
   s.source       = { :git => 'https://github.com/huynguyen-n/GhostTyping.git', :tag => s.version.to_s }
   s.source_files = 'Sources/GhostTyping/*.swift'
 
-  s.swift_version = '4.1'
+  s.swift_version = '3.3'
   s.ios.deployment_target = '9.0'
 
   s.frameworks = 'UIKit'
