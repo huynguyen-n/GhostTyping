@@ -10,7 +10,7 @@ import UIKit
 
 //TODO: Add dummy view to solved selected action in UITextField
 @IBDesignable
-open class GhostType: UIView {
+open class GhostTyping: UIView {
     
     //    MARK:- Private Variables
     private var textField: GhostTypeTextField!

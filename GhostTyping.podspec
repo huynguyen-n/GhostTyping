@@ -9,6 +9,6 @@ DESC
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Huy Nguyen' => 'huynguyen@gmail.com' }
   s.source       = { :git => 'https://github.com/huynguyen-n/GhostTyping.git', :tag => s.version.to_s }
-  s.source_files = 'GhostTyping/GhostTyping/*.swift'
+  s.source_files = 'Sources/GhostTyping/*.swift'
   s.ios.deployment_target = '9.0'
 end
