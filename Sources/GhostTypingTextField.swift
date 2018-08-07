@@ -21,7 +21,7 @@ class GhostTypingTextField: UITextField {
     //    MARK:- Public Variables
     open var isLoop: Bool = false
     
-    open var strings: [String] = ["Ghost Typing", "Ghost Writer"]
+    open var strings: [String] = ["Ghost Cut", "Ghost Dog"]
     
     //    TODO: Custom cursor image
     open var cursorImage: UIImage! {

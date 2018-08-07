@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0027BCB021196C000034417B /* GhostTyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0027BCAE21196BF90034417B /* GhostTyping.framework */; };
-		0027BCB121196C000034417B /* GhostTyping.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0027BCAE21196BF90034417B /* GhostTyping.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0000099B21198DE5008F7A9D /* GhostTyping.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0071D1CA21198BCA0042E3C2 /* GhostTyping.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0000099C21198E04008F7A9D /* GhostTyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0071D1CA21198BCA0042E3C2 /* GhostTyping.framework */; };
 		00B86D71211969D400E66020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B86D70211969D400E66020 /* AppDelegate.swift */; };
 		00B86D73211969D400E66020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B86D72211969D400E66020 /* ViewController.swift */; };
 		00B86D76211969D400E66020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B86D74211969D400E66020 /* Main.storyboard */; };
@@ -17,21 +17,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0027BCB221196C000034417B /* Embed Frameworks */ = {
+		0000099A21198D87008F7A9D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0027BCB121196C000034417B /* GhostTyping.framework in Embed Frameworks */,
+				0000099B21198DE5008F7A9D /* GhostTyping.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0027BCAE21196BF90034417B /* GhostTyping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GhostTyping.framework; sourceTree = "<group>"; };
+		0071D1CA21198BCA0042E3C2 /* GhostTyping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GhostTyping.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/GhostTyping.framework"; sourceTree = "<group>"; };
 		00B86D6D211969D400E66020 /* GhostTypingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostTypingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B86D70211969D400E66020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B86D72211969D400E66020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0027BCB021196C000034417B /* GhostTyping.framework in Frameworks */,
+				0000099C21198E04008F7A9D /* GhostTyping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +55,7 @@
 		0027BCAA21196BBB0034417B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0027BCAE21196BF90034417B /* GhostTyping.framework */,
+				0071D1CA21198BCA0042E3C2 /* GhostTyping.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,7 +108,7 @@
 				00B86D69211969D400E66020 /* Sources */,
 				00B86D6A211969D400E66020 /* Frameworks */,
 				00B86D6B211969D400E66020 /* Resources */,
-				0027BCB221196C000034417B /* Embed Frameworks */,
+				0000099A21198D87008F7A9D /* CopyFiles */,
 			);
 			buildRules = (
 			);
