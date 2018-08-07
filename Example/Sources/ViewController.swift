@@ -11,9 +11,14 @@ import GhostTyping
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ghostTypingView: GhostTyping! {
+        didSet {
+            self.lazyInitGhostTypingView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lazyInitGhostTypingView()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,11 +29,11 @@ class ViewController: UIViewController {
 
     fileprivate func lazyInitGhostTypingView() {
         
-        let frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 100.0))
-        let text = "Hello guys, my name is: "
-        let ghostTypingView = GhostTyping(frame: frame, text: text, typeSpeed: 0.1)
-        ghostTypingView.isLoop = true
-        self.view.addSubview(ghostTypingView)
+//        let frame = self.ghostTypingView.frame
+//        let text = "Hello guys, my name is: "
+//        let ghostTyping = GhostTyping(frame: frame, text: text, typeSpeed: 0.1)
+//        ghostTyping.isLoop = true
+//        self.ghostTypingView.addSubview(ghostTyping)
     }
 }
 

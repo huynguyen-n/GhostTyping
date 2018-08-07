@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,44 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GhostTypingExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabrice-villard" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-m8-SzA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNf-OA-xoK" customClass="GhostTyping">
+                                <rect key="frame" x="0.0" y="399" width="375" height="268"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="hOh-z0-rbv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6SV-m8-SzA" secondAttribute="trailing" id="2Tf-LF-Nzr"/>
+                            <constraint firstItem="fNf-OA-xoK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5bp-q3-YIC"/>
+                            <constraint firstItem="6SV-m8-SzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jDf-wU-quu"/>
+                            <constraint firstItem="fNf-OA-xoK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jR4-nB-Ms0"/>
+                            <constraint firstItem="6SV-m8-SzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kYC-C4-nvA"/>
+                            <constraint firstItem="fNf-OA-xoK" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="nV7-UD-Xdi"/>
+                            <constraint firstAttribute="bottom" secondItem="6SV-m8-SzA" secondAttribute="bottom" id="vL5-Jp-nfR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ghostTypingView" destination="fNf-OA-xoK" id="9hl-VP-WRv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fabrice-villard" width="3264" height="4896"/>
+    </resources>
 </document>
