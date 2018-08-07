@@ -23,13 +23,14 @@ open class GhostTyping: UIView {
     
     //    MARK:- Initialize
     public init(frame: CGRect, text: String, typeSpeed: Double) {
-        super.init(frame: frame)
         
+        super.init(frame: frame)
         textField = GhostTypingTextField(frame: frame, text: text, typeSpeed: typeSpeed)
         let view = UIView(frame: frame)
         view.backgroundColor = .clear
         self.addSubview(textField)
         self.insertSubview(view, aboveSubview: textField)
+        
     }
     
     public required init?(coder aDecoder: NSCoder) {
