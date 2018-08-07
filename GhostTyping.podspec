@@ -12,10 +12,10 @@ GhostTyping basically is a UIView for iOS with UITextField type writing inside. 
 DESC
 
   s.source       = { :git => 'https://github.com/huynguyen-n/GhostTyping.git', :tag => s.version.to_s }
-  s.source_files = 'Sources/GhostTyping/*.swift'
+  s.source_files = 'Sources/*.swift'
 
   s.swift_version = '3.3'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.frameworks = 'UIKit'
   s.requires_arc = true
