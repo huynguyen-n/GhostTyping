@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Example/GhostTypingExample.xcodeproj">
+      location = "group:GhostTyping.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:GhostTyping.xcodeproj">
+      location = "group:Example/GhostTypingExample.xcodeproj">
    </FileRef>
 </Workspace>
