@@ -1,6 +1,6 @@
 #
 
-<img src="https://raw.githubusercontent.com/huynguyen-n/GhostTyping/master/meta/repo_banner.png"/>
+<img src="https://raw.githubusercontent.com/huynguyen-n/GhostTyping/master/Assets/repo_banner.png"/>
 
 [![Travis (.com)](https://img.shields.io/travis/com/huynguyen-n/GhostTyping.svg?style=flat-square)](https://travis-ci.com/huynguyen-n/GhostTyping) [![GitHub issues](https://img.shields.io/github/issues/huynguyen-n/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/issues)
 
