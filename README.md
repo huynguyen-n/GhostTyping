@@ -11,7 +11,7 @@
 
 [![Lisence](https://img.shields.io/cocoapods/l/GhostTyping.svg?style=flat-square)](https://github.com/huynguyen-n/GhostTyping/LISENCE) 
 
-GhostTyping is an custom UIView with UITextField inside library written in Swift. The goal is bring all of animation and features like another Javascript framework to iOS native.
+GhostTyping is an custom UIView with UITextField insided library written in Swift. The goal is bring all of animation and features like another Javascript framework to iOS native.
 
 ## Features
 
