@@ -16,7 +16,7 @@ GhostTyping is an custom UIView with UITextField insided library written in Swif
 ## Features
 
 - [x] Core type writing with UITextField
-- [ ] Cursor custom with images imported
+- [x] Cursor custom with images imported
 - [ ] Animations
   - [x] Basic
   - [ ] Fade Out
