@@ -47,7 +47,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'GhostTyping' -> '0.0.2'
+    pod 'GhostTyping', '0.0.2'
 end
 ```
 
