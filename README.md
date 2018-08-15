@@ -20,7 +20,7 @@ GhostTyping is an custom UIView with UITextField insided library written in Swif
 - [ ] Animations
   - [x] Basic
   - [ ] Fade Out
-  - [ ] Smart Backspace
+  - [x] Smart Backspace
   - [ ] In an input
   - [ ] Shuffled
   - [ ] Bulk Typing
