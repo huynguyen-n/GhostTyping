@@ -1,0 +1,11 @@
+framework module GhostTyping {
+  umbrella header "GhostTyping.h"
+
+  export *
+  module * { export * }
+}
+
+module GhostTyping.Swift {
+    header "GhostTyping-Swift.h"
+    requires objc
+}

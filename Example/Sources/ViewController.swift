@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         let text = "Hello guys, my name is: "
         let ghostTyping = GhostTyping(frame: frame, text: text, typeSpeed: 0.1)
         ghostTyping.isLoop = true
+//        ghostTyping.strings = ["Ghost Typing", "Typer Ghost Ghost"]
         self.view.addSubview(ghostTyping)
     }
 }
