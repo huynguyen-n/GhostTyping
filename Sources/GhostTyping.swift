@@ -20,6 +20,12 @@ open class GhostTyping: UIView {
             textField.isLoop = isLoop
         }
     }
+    
+    open var strings: [String]! {
+        didSet {
+            textField.strings = strings
+        }
+    }
 
     @IBInspectable
     open var text: String! {
