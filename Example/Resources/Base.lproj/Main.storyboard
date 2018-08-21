@@ -17,26 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabrice-villard" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-m8-SzA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H56-kk-dfj" customClass="GhostTyping">
-                                <rect key="frame" x="0.0" y="452" width="375" height="215"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello My name is:"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6SV-m8-SzA" secondAttribute="trailing" id="2Tf-LF-Nzr"/>
-                            <constraint firstItem="6SV-m8-SzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jDf-wU-quu"/>
-                            <constraint firstItem="6SV-m8-SzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kYC-C4-nvA"/>
-                            <constraint firstAttribute="bottom" secondItem="6SV-m8-SzA" secondAttribute="bottom" id="vL5-Jp-nfR"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -45,7 +26,4 @@
             <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="fabrice-villard" width="3264" height="4896"/>
-    </resources>
 </document>
