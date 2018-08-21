@@ -21,7 +21,7 @@ class GhostTypingTextField: UITextField {
     //    MARK:- Public Variables
     open var isLoop: Bool = false
     
-    open var strings: [String] = ["String", "ABC"]
+    open var strings: [String] = [String]()
     
     //    TODO: Custom cursor image
     open var cursorImage: UIImage! {
@@ -102,26 +102,31 @@ extension GhostTypingTextField {
         }
     }
     
+    fileprivate func gtLoopAll() {
+        self.tempStoreText = self.text
+        self.text = ""
+        self.gtTyping(self.tempStoreText, typeSpeed: self.typeSpeed, true, self.currDispatchId)
+    }
     
-    fileprivate func gtDeleteBackward() {
-        
-        // loop array String
-        DispatchQueue.main.async {
-            self.tempStoreText = self.text.replacingOccurrences(of: self.strings.first!, with: "")
-            self.strings.first!.forEach { _ in
-                self.deleteBackward()
-            }
-            self.loopString = self.strings[1]
-            self.gtTyping(self.loopString, typeSpeed: self.typeSpeed, false, self.currDispatchId)
+    fileprivate func gtLoopSmartBackspace(_ index: Int) {
+        let text = self.strings[index]
+        self.tempStoreText = self.text.replacingOccurrences(of: text, with: "")
+        self.text.forEach { _ in
+            self.deleteBackward()
         }
-        
-        
-        // loop all
-//        DispatchQueue.main.async {
-//            self.tempStoreText = self.text
-//            self.text = ""
-//            self.gtTyping(self.tempStoreText, typeSpeed: self.typeSpeed, true, self.currDispatchId)
-//        }
+        self.loopString = text
+        self.gtTyping(self.loopString, typeSpeed: self.typeSpeed, false, self.currDispatchId)
+    }
+    
+    
+    fileprivate func gtDeleteBackward(_ params: (smartBackspace: Bool, index: Int)? = nil ) {
+        DispatchQueue.main.async {
+            if let params = params {
+                self.gtLoopSmartBackspace(params.index)
+            } else {
+                self.gtLoopAll()
+            }
+        }
     }
     
     fileprivate func gtTyping(_ text: String, typeSpeed: Double, _ initial: Bool, _ dispatchId: Int) {
@@ -152,11 +157,14 @@ extension GhostTypingTextField {
                 
                 let nextString = String(text[firstChar...])
                 
-                if nextString.isEmpty && self.isLoop {
+                if nextString.isEmpty && self.isLoop && self.strings.count == 0 {
                     self.gtDeleteBackward()
+                } else if nextString.isEmpty && self.isLoop && self.strings.count > 0 {
+                    let params: (smartBackspace: Bool, index: Int) = (true, self.strings.index(of: text) ?? 0)
+                    self.gtDeleteBackward(params)
+                } else {
+                    self.gtTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
                 }
-                
-                self.gtTyping(nextString, typeSpeed: typeSpeed, false, dispatchId)
             })
         }
     }
