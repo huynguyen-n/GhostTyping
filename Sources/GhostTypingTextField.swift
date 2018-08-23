@@ -109,12 +109,15 @@ extension GhostTypingTextField {
     }
     
     fileprivate func gtLoopSmartBackspace(_ index: Int) {
-        let text = self.strings[index]
-        self.tempStoreText = self.text.replacingOccurrences(of: text, with: "")
-        self.text.forEach { _ in
-            self.deleteBackward()
-        }
-        self.loopString = text
+        let textAtIndex = self.strings[index]
+        self.tempStoreText = self.text.replacingOccurrences(of: textAtIndex, with: "")
+        self.loopString.forEach { _ in self.deleteBackward() }
+//        textAtIndex.forEach { _ in
+//            if self.loopString.count > 0 {
+//                self.deleteBackward()
+//            }
+//        }
+        self.loopString = textAtIndex
         self.gtTyping(self.loopString, typeSpeed: self.typeSpeed, false, self.currDispatchId)
     }
     
