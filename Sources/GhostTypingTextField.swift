@@ -112,11 +112,6 @@ extension GhostTypingTextField {
         let textAtIndex = self.strings[index]
         self.tempStoreText = self.text.replacingOccurrences(of: textAtIndex, with: "")
         self.loopString.forEach { _ in self.deleteBackward() }
-//        textAtIndex.forEach { _ in
-//            if self.loopString.count > 0 {
-//                self.deleteBackward()
-//            }
-//        }
         self.loopString = textAtIndex
         self.gtTyping(self.loopString, typeSpeed: self.typeSpeed, false, self.currDispatchId)
     }
